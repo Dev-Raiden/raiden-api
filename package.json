@@ -18,6 +18,7 @@
     "tiktok",
     "youtube"
   ],
+  "private": false,
   "author": "Dev Raiden",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
@@ -48,5 +49,13 @@
       "import": "./lib/esm/index.js",
       "require": "./lib/cjs/index.js"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Raiden/raiden-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dev-Raiden/raiden-api/issues"
+  },
+  "homepage": "https://github.com/Dev-Raiden/raiden-api#readme"
 }
