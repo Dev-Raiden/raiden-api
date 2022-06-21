@@ -12,23 +12,23 @@ A Free API build in TypeScript and have many API endpoint.
 ## Installation
 
 ```bash
-npm install @raiden/api
+npm install @devraiden/api
 ```
 
 ## Example Usage
 
 ```js
 // ESM
-import Raiden from '@raiden/api';
+import Raiden from '@devraiden/api';
 
 // CJS
-const Raiden = require('@raiden/api');
+const Raiden = require('@devraiden/api');
 ```
 
 ## TikTok Downloader
 
 ```js
-import { TikTokDownloader } from '@raiden/api';
+import { TikTokDownloader } from '@devraiden/api';
 
 const url = 'https://vt.tiktok.com/ZSdcMAn1n/?k=1';
 const res = await TikTokDownloadt(url)
@@ -37,7 +37,7 @@ consolse.log(res);
 
 ## Instagram Downloader
 ```js
-import { InstagramDownloader } from '@raiden/api';
+import { InstagramDownloader } from '@devraiden/api';
 
 const url = 'https://www.instagram.com/p/CcgDk-AFZKN/';
 const res = await InstagramDownloader(url);
@@ -47,7 +47,7 @@ console.log(res);
 ## YouTube Downloader & YouTube Searching
 
 ```js
-import { YouTubeDownloaders, YouTubeSearchings } from '@raiden/api';
+import { YouTubeDownloaders, YouTubeSearchings } from '@devraiden/api';
 
 const url = 'https://www.youtube.com/watch?v=g-nG6n7yx3Q';
 const res = await YouTubeDownloaders(url);

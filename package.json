@@ -1,5 +1,5 @@
 {
-  "name": "@raiden/api",
+  "name": "@devraiden/api",
   "version": "1.0.0",
   "description": "Dev Raiden multipurpose API.",
   "main": "dist/index.js",
@@ -51,8 +51,7 @@
     }
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dev-Raiden/raiden-api.git"
+    "url": "git://github.com/Dev-Raiden/raiden-api.git"
   },
   "bugs": {
     "url": "https://github.com/Dev-Raiden/raiden-api/issues"
