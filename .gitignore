@@ -4,3 +4,4 @@ node_modules
 dist
 srcd
 docker-compose.yml
+lib/

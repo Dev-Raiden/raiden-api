@@ -1,13 +1,15 @@
 interface TikTokDownloader {
-    author: string;
+    author: {
+        username: string;
+    }
     description: string;
-    video: {
+    videos: {
         [Key: string]: string;
     }
 }
 
 export type TikTokDownloaderTypes = TikTokDownloader & {
-    video: {
+    videos: {
         without_watermark_v1: string;
         without_watermark_v2: string;
         without_watermark_raw: string;
@@ -22,7 +24,7 @@ export type InstagramDownloaderTypes = InstagramDownloader & {
     thumbnail: string;
 }
 
-interface YouTubeDownloader {
+export interface YouTubeDownloader {
     video_id: string,
     video_v_id: string;
     video_thumbnail: string;
@@ -38,7 +40,7 @@ export type YouTubeDownloaderVideoOrAudio = {
         video_quality: string;
         video_sizeH: string;
         video_size: number;
-        video_download(): Promise<string>;
+        download_link(): Promise<string>;
     }
 }
 
@@ -60,7 +62,7 @@ export interface YouTubeSearching {
         type: 'video';
     }[];
 
-    channels: {
+    channel: {
         channelId: string;
         url: string;
         channelName: string;

@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { InstagramDownloaderTypes } from '../..';
+import { InstagramDownloaderTypes } from './types';
 import { ErrorAPI } from '../../utils/errors';
 
 const InstagramDownloader = async (url: string): Promise<InstagramDownloaderTypes> => {

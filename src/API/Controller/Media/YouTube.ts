@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { YouTubeDownloader } from '../..';
+import { YouTubeDownloader } from './types';
 import { ErrorAPI } from '../../utils/errors';
 
 const YouTubeDownloaders= async (url: string): Promise<YouTubeDownloader> => {

@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { YouTubeSearching } from '../..';
+import { YouTubeSearching } from './types';
 import { ErrorAPI } from '../../utils/errors';
 
 const YouTubeSearchings = async (title: string): Promise<YouTubeSearching> => {

@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { TikTokDownloaderTypes } from '../..';
+import { TikTokDownloaderTypes } from './types';
 import { ErrorAPI } from '../../utils/errors';
 
 const TikTokDownloader = async (url: string): Promise<TikTokDownloaderTypes> => {

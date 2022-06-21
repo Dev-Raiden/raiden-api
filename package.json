@@ -2,10 +2,19 @@
   "name": "@devraiden/api",
   "version": "1.0.1",
   "description": "Dev Raiden multipurpose API.",
-  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon",
-    "prod": "tsc && node ."
+    "prod": "tsc && node .",
+    "test": "npm run build && npm run test:cjs && npm run test:esm",
+    "test:cjs": "mocha --timeout 20000 ./lib/cjs/**/test.js",
+    "test:esm": "mocha --timeout 20000 ./lib/esm/**/test.js",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types && node scripts/write-package.js",
+    "build:cjs": "tsc --p src/tsconfig.cjs.json",
+    "build:esm": "tsc --p src/tsconfig.esm.json",
+    "build:types": "tsc --p tsconfig.types.json",
+    "lint:fix": "npx eslint src/** --fix --ignore-pattern src/*.json",
+    "clean": "rimraf ./lib",
+    "prepare": "node scripts/compile-typescript.js"
   },
   "keywords": [
     "api",
@@ -22,6 +31,7 @@
   "author": "Dev Raiden",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@types/chai": "^4.3.1",
     "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
@@ -31,7 +41,10 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "axios": "^0.27.2"
+    "@types/mocha": "^9.1.1",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
   },
   "nodemonConfig": {
     "ignore": [
@@ -43,6 +56,13 @@
     ],
     "exec": "rimraf dist && tsc && node ."
   },
+  "repository": {
+    "url": "git://github.com/Dev-Raiden/raiden-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dev-Raiden/raiden-api/issues"
+  },
+  "homepage": "https://github.com/Dev-Raiden/raiden-api#readme",
   "exports": {
     ".": {
       "types": "./lib/@types/index.d.ts",
@@ -50,11 +70,18 @@
       "require": "./lib/cjs/index.js"
     }
   },
-  "repository": {
-    "url": "git://github.com/Dev-Raiden/raiden-api.git"
+  "main": "./lib/cjs/index.js",
+  "types": "./lib/@types/index.d.ts",
+  "engines": {
+    "node": ">= 16"
   },
-  "bugs": {
-    "url": "https://github.com/Dev-Raiden/raiden-api/issues"
+  "directories": {
+    "lib": "lib",
+    "src": "src",
+    "scripts": "scripts"
   },
-  "homepage": "https://github.com/Dev-Raiden/raiden-api#readme"
+  "files": [
+    "lib/*",
+    "scripts/*"
+  ]
 }
