@@ -1,5 +1,5 @@
 {
-  "name": "@devraiden/api",
+  "name": "@Dev-Raiden/api",
   "version": "1.0.0",
   "description": "Dev Raiden multipurpose API.",
   "main": "dist/index.js",
