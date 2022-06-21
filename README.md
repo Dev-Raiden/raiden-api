@@ -19,10 +19,10 @@ npm install @devraiden/api
 
 ```js
 // ESM
-import Raiden from '@Dev-Raiden/api';
+import Raiden from '@devraiden/api';
 
 // CJS
-const Raiden = require('@Dev-Raiden/api');
+const Raiden = require('@devraiden/api');
 ```
 
 ## TikTok Downloader
@@ -37,7 +37,7 @@ consolse.log(res);
 
 ## Instagram Downloader
 ```js
-import { InstagramDownloader } from '@Dev-Raiden/api';
+import { InstagramDownloader } from '@devraiden/api';
 
 const url = 'https://www.instagram.com/p/CcgDk-AFZKN/';
 const res = await InstagramDownloader(url);
@@ -47,7 +47,7 @@ console.log(res);
 ## YouTube Downloader & YouTube Searching
 
 ```js
-import { YouTubeDownloaders, YouTubeSearchings } from '@Dev-Raiden/api';
+import { YouTubeDownloaders, YouTubeSearchings } from '@devraiden/api';
 
 const url = 'https://www.youtube.com/watch?v=g-nG6n7yx3Q';
 const res = await YouTubeDownloaders(url);
