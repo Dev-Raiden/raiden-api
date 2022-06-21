@@ -28,7 +28,7 @@ const Raiden = require('@devraiden/api');
 ## TikTok Downloader
 
 ```js
-import { TikTokDownloader } from '@Dev-Raiden/api';
+import { TikTokDownloader } from '@devraiden/api';
 
 const url = 'https://vt.tiktok.com/ZSdcMAn1n/?k=1';
 const res = await TikTokDownloadt(url)
