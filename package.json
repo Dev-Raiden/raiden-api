@@ -1,0 +1,52 @@
+{
+  "name": "@raiden/api",
+  "version": "1.0.0",
+  "description": "Dev Raiden multipurpose API.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "prod": "tsc && node ."
+  },
+  "keywords": [
+    "api",
+    "discord.js",
+    "free api",
+    "image",
+    "image api",
+    "action api",
+    "instagram",
+    "tiktok",
+    "youtube"
+  ],
+  "author": "Dev Raiden",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.18.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "dist/*"
+    ],
+    "ext": "ts",
+    "watch": [
+      "src/*"
+    ],
+    "exec": "rimraf dist && tsc && node ."
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/@types/index.d.ts",
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js"
+    }
+  }
+}
